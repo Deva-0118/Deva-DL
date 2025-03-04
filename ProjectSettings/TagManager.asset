@@ -9,6 +9,7 @@ TagManager:
   - Farm
   - WaterCan
   - Wheat_Land
+  - Wheat
   layers:
   - Default
   - TransparentFX
