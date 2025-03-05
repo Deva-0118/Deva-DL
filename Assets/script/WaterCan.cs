@@ -20,9 +20,11 @@ public class WaterCan : MonoBehaviour
     {
         if (other.CompareTag("PoolWater")) // 确保 poolWater 物体的 Tag 设为 "PoolWater"
         {
+            PoolWater poolWater = other.GetComponent<PoolWater>(); // 获取 PoolWater 脚本
             hasWater = true;
             if (waterMesh != null)
             {
+                poolWater.OnWaterCanTouch(); // 调用 PoolWater 中的方法
                 waterMesh.SetActive(true); // 让水可见
             }
             Debug.Log("WaterCan is now filled!");
@@ -32,6 +34,7 @@ public class WaterCan : MonoBehaviour
             FindWheatLands(other.transform);
             PourWater();
         }
+    
     }
 
     public bool IsFilled()

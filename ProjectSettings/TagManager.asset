@@ -11,6 +11,9 @@ TagManager:
   - Wheat_Land
   - Wheat
   - Poop
+  - Apple
+  - Pig
+  - Bin
   layers:
   - Default
   - TransparentFX

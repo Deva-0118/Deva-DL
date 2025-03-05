@@ -8,9 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wheat_ground
-  m_Shader: {fileID: -6465566751694194690, guid: bf36778a400a0894b86a1f49c422fa62,
-    type: 3}
-  m_Parent: {fileID: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: bf36778a400a0894b86a1f49c422fa62, type: 3}
+  m_Parent: {fileID: 2100000, guid: 901576527fed2634d8a79e6f7ab014e5, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,40 +24,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecularMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 081b2dd94ba41a74d9902f4660c6dbb2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - LIGHTMAP: 0
-    - _LightProbeContribution: 3.5
-    - _OutlineDepthSensitivity: 1
+    - _LightProbeContribution: 5
+    - _OutlineDepthSensitivity: 0
     - _OutlineNormalsSensitivity: 1
-    - _OutlineThickness: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    - _Smoothness: 0.9
+    - _Smoothness: 1
     m_Colors:
-    - _MainColor: {r: 0.88140154, g: 0.54048204, b: 0.7129012, a: 0}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5739956890501404458
 MonoBehaviour:
