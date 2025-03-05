@@ -10,6 +10,7 @@ TagManager:
   - WaterCan
   - Wheat_Land
   - Wheat
+  - Poop
   layers:
   - Default
   - TransparentFX
