@@ -7,7 +7,7 @@ public class LeafColorController : MonoBehaviour
 {
     public Material leafMaterial; // Ò¶×ÓµÄ²ÄÖÊ
     private Color startColor = new Color(142f / 255f, 255f / 255f, 140f / 255f, 1f);
-    private Color endColor = new Color(1f, 1f, 1f, 0f);
+    private Color endColor = new Color(41f, 55f, 100f, 0f);
     private float transitionTime = 40f;
     private float timer = 0f;
     private bool isTransitioning = false;

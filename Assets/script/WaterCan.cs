@@ -85,12 +85,24 @@ public class WaterCan : MonoBehaviour
         spawnPosition.y += 0.1f; // 确保小麦不会卡进地面
 
         Quaternion wheatRotation = Quaternion.Euler(-90, 0, 0); // 旋转方向
-        GameObject wheatInstance = Instantiate(wheatPrefab, spawnPosition, wheatRotation);
+                                                                //GameObject wheatInstance = Instantiate(wheatPrefab, spawnPosition, wheatRotation);
+        GameObject wheatInstance = Instantiate(wheatPrefab, wheatLand.position, Quaternion.identity);
 
         // **让 Wheat 作为 Wheat_Land 的子物体，方便管理**
-        wheatInstance.transform.SetParent(wheatLand);
+        //wheatInstance.transform.SetParent(wheatLand);
 
-        Debug.Log("Wheat generated at: " + spawnPosition);
+        //Debug.Log("Wheat generated at: " + spawnPosition);
+
+        // 获取小麦的 Renderer，计算实际高度
+        Renderer wheatRenderer = wheatInstance.GetComponent<Renderer>();
+        if (wheatRenderer != null)
+        {
+            float wheatHeight = wheatRenderer.bounds.size.y; // 获取小麦整体高度
+            wheatInstance.transform.position = wheatLand.position + Vector3.up * (wheatHeight / 2);
+        }
+
+        wheatInstance.transform.SetParent(wheatLand);
+        Debug.Log("Wheat generated at: " + wheatInstance.transform.position);
     }
 
     public void PourWater()

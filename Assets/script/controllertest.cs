@@ -11,7 +11,7 @@ public class LeafTintController : MonoBehaviour
     public Apple apple;
 
     private Color minColor = new Color(142f / 255f, 255f / 255f, 140f / 255f, 1f); // 初始颜色
-    private Color maxColor = new Color(255f / 255f, 255f / 255f, 255f / 255f, 0f); // 目标颜色（透明）
+    private Color maxColor = new Color(242f / 255f, 194f / 255f, 97f / 255f, 0f); // 目标颜色（透明）
 
     void Start()
     {
