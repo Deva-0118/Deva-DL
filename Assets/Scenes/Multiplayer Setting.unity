@@ -1866,6 +1866,10 @@ PrefabInstance:
       propertyPath: instanceId
       value: f9939e05-3d68-4a40-bc09-3faa245da1fc
       objectReference: {fileID: 0}
+    - target: {fileID: 4922165316301356947, guid: f03821b3859351043b7773fa78820909, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 8074656191928570362, guid: f03821b3859351043b7773fa78820909, type: 3}
     - target: {fileID: 6393793215183212304, guid: f03821b3859351043b7773fa78820909, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0249
@@ -2006,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763187169918514987, guid: 507ed97e668b1f64d9c1f3ecd3e06ee6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3763187169918514991, guid: 507ed97e668b1f64d9c1f3ecd3e06ee6, type: 3}
       propertyPath: m_LocalScale.x
@@ -2582,6 +2586,10 @@ PrefabInstance:
       propertyPath: instanceId
       value: fdd39b6b-31bc-493b-9741-381781d553cb
       objectReference: {fileID: 0}
+    - target: {fileID: 4922165316301356947, guid: f03821b3859351043b7773fa78820909, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 8074656191928570362, guid: f03821b3859351043b7773fa78820909, type: 3}
     - target: {fileID: 6393793215183212304, guid: f03821b3859351043b7773fa78820909, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0851
@@ -2643,6 +2651,10 @@ PrefabInstance:
       propertyPath: instanceId
       value: 4cfb6024-766b-4837-a8b2-63f9602263e2
       objectReference: {fileID: 0}
+    - target: {fileID: 4922165316301356947, guid: f03821b3859351043b7773fa78820909, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 8074656191928570362, guid: f03821b3859351043b7773fa78820909, type: 3}
     - target: {fileID: 6393793215183212304, guid: f03821b3859351043b7773fa78820909, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1666
@@ -3182,7 +3194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leafTintController: {fileID: 1241333589}
-  PoolWaterController: {fileID: 0}
+  PoolWaterController: {fileID: 1401921036}
+  apple: {fileID: 4922165316301356947, guid: f03821b3859351043b7773fa78820909, type: 3}
 --- !u!1 &1164499176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3541367858456889676, guid: 95b33befe79c62c46811e9d810bd24fa, type: 3}
@@ -6263,6 +6276,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4922165316301356947, guid: f03821b3859351043b7773fa78820909, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 8074656191928570362, guid: f03821b3859351043b7773fa78820909, type: 3}
     - target: {fileID: 6393793215183212304, guid: f03821b3859351043b7773fa78820909, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.15551443

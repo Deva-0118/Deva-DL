@@ -35,10 +35,10 @@ public class LeafTintController : MonoBehaviour
             float alpha = Mathf.Lerp(1f, 0f, t);
             leafMaterial.SetFloat("_Alpha", alpha); // 设置透明度变量 _Alpha
 
-            if(duration <= timer)
+            if (timer >= duration)
             {
                 isChanging = false;
-                apple.AppleDisAppear();
+                apple.DestroyApple(); // 彻底销毁 Apple
             }
         }
     }
@@ -57,7 +57,8 @@ public class LeafTintController : MonoBehaviour
         timer = 0f;
         isChanging = true;
         leafMaterial.SetColor("_MainColor", minColor);
-        apple.AppleAppear();
+        apple.RespawnApple();
     }
 }
+
 
