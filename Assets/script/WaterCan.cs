@@ -60,9 +60,9 @@ public class WaterCan : MonoBehaviour
             }
         }
 
-        if (wheatCount < 2)
+        if (wheatCount == 0)
         {
-            Debug.LogWarning("Not enough empty Wheat_Lands found in Farm!");
+            Debug.LogWarning("All Wheat_Lands are occupied! No new wheat generated.");
         }
     }
 
@@ -81,29 +81,26 @@ public class WaterCan : MonoBehaviour
 
     void GenerateWheat(Transform wheatLand)
     {
-        Vector3 spawnPosition = wheatLand.position; // 生成位置
-        spawnPosition.y += 0.1f; // 确保小麦不会卡进地面
+        // **假设小麦是躺倒的，调整其 X 轴旋转**
+        Quaternion wheatRotation = Quaternion.Euler(-90, 0, 0); // 视情况调整 X 轴
 
-        Quaternion wheatRotation = Quaternion.Euler(-90, 0, 0); // 旋转方向
-                                                                //GameObject wheatInstance = Instantiate(wheatPrefab, spawnPosition, wheatRotation);
-        GameObject wheatInstance = Instantiate(wheatPrefab, wheatLand.position, Quaternion.identity);
+        GameObject wheatInstance = Instantiate(wheatPrefab, wheatLand.position, wheatRotation);
 
-        // **让 Wheat 作为 Wheat_Land 的子物体，方便管理**
-        //wheatInstance.transform.SetParent(wheatLand);
-
-        //Debug.Log("Wheat generated at: " + spawnPosition);
-
-        // 获取小麦的 Renderer，计算实际高度
+        // **修正小麦底部对齐地面**
         Renderer wheatRenderer = wheatInstance.GetComponent<Renderer>();
         if (wheatRenderer != null)
         {
-            float wheatHeight = wheatRenderer.bounds.size.y; // 获取小麦整体高度
-            wheatInstance.transform.position = wheatLand.position + Vector3.up * (wheatHeight / 2);
+            float offset = wheatInstance.transform.position.y - wheatRenderer.bounds.min.y;
+            wheatInstance.transform.position -= new Vector3(0, offset, 0);
         }
 
+        // **设为 Wheat_Land 子物体**
         wheatInstance.transform.SetParent(wheatLand);
+
         Debug.Log("Wheat generated at: " + wheatInstance.transform.position);
     }
+
+
 
     public void PourWater()
     {
