@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PoolWaterController : MonoBehaviour
+public class PoolWaterTrigger : MonoBehaviour
 {
     public TintController tintController;
 

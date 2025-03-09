@@ -24,22 +24,22 @@ public class ThirdLevelCounter : MonoBehaviour
             case "Wheat":
                 if (wheatCounter > minCounter) wheatCounter--;
                 UpdateCounterTexts();
+                Destroy(other.gameObject); // 銷毀Wheat
                 break;
             case "Pig":
                 if (pigCounter > minCounter) pigCounter--;
                 UpdateCounterTexts();
+                Destroy(other.gameObject); // 銷毀Pig
                 break;
             case "Apple":
                 if (appleCounter > minCounter) appleCounter--;
                 UpdateCounterTexts();
+                Destroy(other.gameObject); // 銷毀Apple
                 break;
             case "Poop":
-                // 只銷毀物體，不影響計數器
+                Destroy(other.gameObject); // 只銷毀這些物體，不影響計數器
                 break;
         }
-
-        // 無論是 "Wheat"、"Pig"、"Apple" 或其他標籤，都銷毀物體
-        Destroy(other.gameObject);
     }
 
     void UpdateCounterTexts()
